@@ -198,7 +198,6 @@ This is aimed at extensions such as `pymdownx.snippets` or `markdown_include.inc
 markdown_extensions:
   - pymdownx.snippets:
       base_path: !relative
-```
 
 See [**documentation**](../user-guide/configuration.md#paths-relative-to-the-current-file-or-site). Context: #2154, #3258
 
@@ -218,10 +217,6 @@ Using the construct `{% for script in extra_javascript %}` is now fully obsolete
 
 Instead, you now need to use `config.extra_javascript` (which was already the case for a while) and couple it with the new `script_tag` filter:
 
-```django
-    {%- for script in config.extra_javascript %}
-      {{ script | script_tag }}
-    {%- endfor %}
 ```
 
 See [**documentation**](../dev-guide/themes.md#picking-up-css-and-javascript-from-the-config).
