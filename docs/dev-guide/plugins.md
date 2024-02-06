@@ -486,20 +486,6 @@ class MyPlugin(BasePlugin):
 
 To ensure that your plugins' log messages adhere with MkDocs' formatting and `--verbose`/`--debug` flags, please write the logs to a logger under the `mkdocs.plugins.` namespace.
 
-> EXAMPLE:
->
-> ```python
-> import logging
->
-> log = logging.getLogger(f"mkdocs.plugins.{__name__}")
->
-> log.warning("File '%s' not found. Breaks the build if --strict is passed", my_file_name)
-> log.info("Shown normally")
-> log.debug("Shown only with `--verbose`")
->
-> if log.getEffectiveLevel() <= logging.DEBUG:
->     log.debug("Very expensive calculation only for debugging: %s", get_my_diagnostics())
-> ```
 
 `log.error()` is another logging level that is differentiated by its look, but in all other ways it functions the same as `warning`, so it's strange to use it. If your plugin encounters an actual error, it is best to just interrupt the build by raising [`mkdocs.exceptions.PluginError`][] (which will also log an ERROR message).
 

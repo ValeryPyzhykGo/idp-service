@@ -369,9 +369,7 @@ This can be used in conjunction with other attributes of the `page`
 object to alter the behavior. For example, to display a different title
 on the homepage:
 
-```django
-{% if not page.is_homepage %}{{ page.title }} - {% endif %}{{ site_name }}
-```
+
 
 ::: mkdocs.structure.pages.Page.previous_page
     options:
@@ -603,11 +601,6 @@ While the `search` plugin is activated by default, users can disable the plugin
 and themes should account for this. It is recommended that theme templates wrap
 search specific markup with a check for the plugin:
 
-```django
-{% if 'search' in config.plugins %}
-    search stuff here...
-{% endif %}
-```
 
 At its most basic functionality, the search plugin will simply provide an index
 file which is no more than a JSON file containing the content of all pages.
@@ -820,12 +813,6 @@ show_sidebar: true
 ```
 
 Then in a template, that config option could be referenced:
-
-```django
-{% if config.theme.show_sidebar %}
-<div id="sidebar">...</div>
-{% endif %}
-```
 
 And the user could override the default in their project's `mkdocs.yml` config
 file:
