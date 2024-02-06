@@ -82,25 +82,6 @@ theme:
 
 The simplest `main.html` file is the following:
 
-```django
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
-    {%- for path in config.extra_css %}
-      <link href="{{ path | url }}" rel="stylesheet">
-    {%- endfor %}
-  </head>
-  <body>
-    {{ page.content }}
-
-    {%- for script in config.extra_javascript %}
-      {{ script | script_tag }}
-    {%- endfor %}
-  </body>
-</html>
-```
-
 The body content from each page specified in `mkdocs.yml` is inserted using the
 `{{ page.content }}` tag. Style-sheets and scripts can be brought into this
 theme as with a normal HTML file. Navbars and tables of contents can also be
@@ -137,43 +118,19 @@ The theme must include the HTML that links the items from these configs, otherwi
 >
 > >? EXAMPLE: **Obsolete style:**
 > >
-> > ```django
-> >   {%- for path in extra_javascript %}
-> >     <script src="{{ path }}"></script>
-> >   {%- endfor %}
-> > ```
 > >
 > > This old-style example even uses the obsolete top-level `extra_javascript` list. Please always use `config.extra_javascript` instead.
 > >
 > > So, a slightly more modern approach is the following, but it is still obsolete because it ignores the extra attributes of the script:
 > >
-> > ```django
-> >   {%- for path in config.extra_javascript %}
-> >     <script src="{{ path | url }}"></script>
-> >   {%- endfor %}
-> > ```
 > <!-- -->
 > >? EXAMPLE: **New style:**
 > >
-> > ```django
-> >   {%- for script in config.extra_javascript %}
-> >     {{ script | script_tag }}
-> >   {%- endfor %}
-> > ```
 >
 > If you wish to be able to pick up the new customizations while keeping your theme compatible with older versions of MkDocs, use this snippet:
 >
 > >! EXAMPLE: **Backwards-compatible style:**
 > >
-> > ```django
-> >   {%- for script in config.extra_javascript %}
-> >     {%- if script.path %}  {# Detected MkDocs 1.5+ which has `script.path` and `script_tag` #}
-> >       {{ script | script_tag }}
-> >     {%- else %}  {# Fallback - examine the file name directly #}
-> >       <script src="{{ script | url }}"{% if script.endswith(".mjs") %} type="module"{% endif %}></script>
-> >     {%- endif %}
-> >   {%- endfor %}
-> > ```
 
 ## Theme Files
 
@@ -284,30 +241,6 @@ list of all pages, use the [pages](#pages) template variable.
 Following is a basic usage example which outputs the first and second level
 navigation as a nested list.
 
-```django
-{% if nav|length > 1 %}
-    <ul>
-    {% for nav_item in nav %}
-        {% if nav_item.children %}
-            <li>{{ nav_item.title }}
-                <ul>
-                {% for nav_item in nav_item.children %}
-                    <li class="{% if nav_item.active %}current{% endif %}">
-                        <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
-                    </li>
-                {% endfor %}
-                </ul>
-            </li>
-        {% else %}
-            <li class="{% if nav_item.active %}current{% endif %}">
-                <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
-            </li>
-        {% endif %}
-    {% endfor %}
-    </ul>
-{% endif %}
-```
-
 #### base_url
 
 The `base_url` provides a relative path to the root of the MkDocs project. While
@@ -367,15 +300,6 @@ All `page` objects contain the following attributes:
 The following example would display the top two levels of the Table of Contents
 for a page.
 
-```django
-<ul>
-{% for toc_item in page.toc %}
-    <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-    {% for toc_item in toc_item.children %}
-        <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-    {% endfor %}
-{% endfor %}
-</ul>
 ```
 
 ::: mkdocs.structure.pages.Page.meta
@@ -398,13 +322,6 @@ A template can access this metadata for the page with the `meta.source`
 variable. This could then be used to link to source files related to the
 documentation page.
 
-```django
-{% for filename in page.meta.source %}
-  <a class="github" href="https://github.com/.../{{ filename }}">
-    <span class="label label-info">{{ filename }}</span>
-  </a>
-{% endfor %}
-```
 
 ::: mkdocs.structure.pages.Page.url
     options:
@@ -641,18 +558,6 @@ extra:
 ```
 
 And then displayed with this HTML in the custom theme.
-
-```django
-{{ config.extra.version }}
-
-{% if config.extra.links %}
-  <ul>
-  {% for link in config.extra.links %}
-      <li>{{ link }}</li>
-  {% endfor %}
-  </ul>
-{% endif %}
-```
 
 ## Template Filters
 

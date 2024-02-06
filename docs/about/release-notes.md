@@ -1173,23 +1173,12 @@ This change applies to any navigation items and pages, as well as the
 corresponding configuration values (`config.extra_javascript` and
 `config.extra_css` respectively) should be used with the filter instead.
 
-```django
-{% for path in config.extra_css %}
-    <link href="{{ path|url }}" rel="stylesheet">
-{% endfor %}
-```
 
 Note that navigation can now include links to external sites. Obviously, the
 `base_url` should not be prepended to these items. However, the `url` template
 filter is smart enough to recognize the URL is absolute and does not alter it.
 Therefore, all navigation items can be passed to the filter and only those that
 need to will be altered.
-
-```django
-{% for nav_item in nav %}
-    <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
-{% endfor %}
-```
 
 [base_url]: ../dev-guide/themes.md#base_url
 [url]: ../dev-guide/themes.md#url
