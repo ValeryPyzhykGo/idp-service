@@ -1423,7 +1423,7 @@ site_url          | config.site_url
 copyright         | config.copyright
 google_analytics  | config.google_analytics
 homepage_url      | nav.homepage.url
-favicon           | {{ base_url }}/img/favicon.ico
+favicon           | {{ base_url }}/https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico
 
 #### Auto-Populated extra_css and extra_javascript Fully Deprecated. (#986)
 
@@ -1529,9 +1529,9 @@ instead.
 The global variable `favicon` maps to the configuration setting `site_favicon`.
 Both the template variable and the configuration setting are being deprecated
 and will issue a warning but continue to work for version 0.16, and may be
-removed in a future version. Use `{{ base_url }}/img/favicon.ico` in your
+removed in a future version. Use `{{ base_url }}/https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico` in your
 template instead. Users can simply save a copy of their custom favicon icon to
-`img/favicon.ico` in either their `docs_dir` or `theme_dir`.
+`https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico` in either their `docs_dir` or `theme_dir`.
 
 A number of variables map directly to similarly named variables in the `config`.
 Those variables are being deprecated and will issue a warning but continue to
@@ -1557,7 +1557,7 @@ site_url          | config.site_url
 copyright         | config.copyright
 google_analytics  | config.google_analytics
 homepage_url      | nav.homepage.url
-favicon           | {{ base_url }}/img/favicon.ico
+favicon           | {{ base_url }}/https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico
 
 #### Increased Template Customization. (#607)
 

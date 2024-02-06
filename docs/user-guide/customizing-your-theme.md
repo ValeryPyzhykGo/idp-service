@@ -101,7 +101,7 @@ To override the 404 error page ("file not found"), add a new template file named
 included in a template, review the [Theme Developer Guide][custom theme].
 
 To override the favicon, you can add a new icon file at
-`custom_theme/img/favicon.ico`.
+`custom_theme/https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico`.
 
 To include a JavaScript library, copy the library to the `custom_theme/js/`
 directory.
@@ -112,7 +112,7 @@ Your directory structure should now look like this:
 - docs/
   - index.html
 - custom_theme/
-  - img/
+  - https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/
     - favicon.ico
   - js/
     - somelib.js

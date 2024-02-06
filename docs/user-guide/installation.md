@@ -31,7 +31,7 @@ installer appropriate for your system from [python.org] and running it.
 > Python added to your PATH if the installer offers such an option (it's
 > normally off by default).
 >
-> ![Add Python to PATH](../img/win-py-install.png)
+> ![Add Python to PATH](../https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/win-py-install.png)
 
 ### Installing pip
 

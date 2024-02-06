@@ -26,7 +26,7 @@ cd my-project
 
 Take a moment to review the initial project that has been created for you.
 
-![The initial MkDocs layout](img/initial-layout.png)
+![The initial MkDocs layout](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/initial-layout.png)
 
 There's a single configuration file named `mkdocs.yml`, and a folder named
 `docs` that will contain your documentation source files (`docs` is
@@ -50,7 +50,7 @@ INFO    -  [15:50:43] Serving on http://127.0.0.1:8000/
 Open up <http://127.0.0.1:8000/> in your browser, and you'll see the default
 home page being displayed:
 
-![The MkDocs live server](img/screenshot.png)
+![The MkDocs live server](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/screenshot.png)
 
 The dev-server also supports auto-reloading, and will rebuild your documentation
 whenever anything in the configuration file, documentation directory, or theme
@@ -70,7 +70,7 @@ site_name: MkLorum
 Your browser should immediately reload, and you'll see your new site name take
 effect.
 
-![The site_name setting](img/site-name.png)
+![The site_name setting](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/site-name.png)
 
 NOTE:
 The [`site_name`][site_name] configuration
@@ -100,7 +100,7 @@ Save your changes and you'll now see a navigation bar with `Home` and `About`
 items on the left as well as `Search`, `Previous`, and `Next` items on the
 right.
 
-![Screenshot](img/multipage.png)
+![Screenshot](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/multipage.png)
 
 Try the menu items and navigate back and forth between pages. Then click on
 `Search`. A search dialog will appear, allowing you to search for any text on
@@ -109,7 +109,7 @@ term on the site and links directly to the section of the page in which the
 search term appears. You get all of that with no effort or configuration on your
 part!
 
-![Screenshot](img/search.png)
+![Screenshot](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/search.png)
 
 ## Theming our documentation
 
@@ -126,7 +126,7 @@ theme: readthedocs
 
 Save your changes, and you'll see the ReadTheDocs theme being used.
 
-![Screenshot](img/readthedocs.png)
+![Screenshot](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/readthedocs.png)
 
 ## Changing the Favicon Icon
 
@@ -135,7 +135,7 @@ an `img` subdirectory in the `docs` directory and copy your custom `favicon.ico`
 file to that directory. MkDocs will automatically detect and use that file as your
 favicon icon.
 
-[MkDocs favicon]: img/favicon.ico
+[MkDocs favicon]: https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/favicon.ico
 
 ## Building the site
 

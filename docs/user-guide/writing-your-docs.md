@@ -317,7 +317,7 @@ docs/
     index.md
     about.md
     license.md
-    img/
+    https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/
         screenshot.png
 ```
 
@@ -327,7 +327,7 @@ regular Markdown image syntaxes:
 ```Markdown
 Cupcake indexer is a snazzy new project for indexing small cakes.
 
-![Screenshot](img/screenshot.png)
+![Screenshot](https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/screenshot.png)
 
 *Above: Cupcake indexer in progress*
 ```

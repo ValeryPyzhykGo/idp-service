@@ -262,7 +262,7 @@ There are three kinds of events: [Global Events], [Page Events] and
       <li>Dotted lines appear at splits from global events to per-page events.
       <li>Click the events' titles to jump to their description.
     </ul>
---8<-- "docs/img/plugin-events.svg"
+--8<-- "docs/https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/plugin-events.svg"
   </div>
 </details>
 <br>

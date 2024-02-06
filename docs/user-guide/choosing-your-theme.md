@@ -21,7 +21,7 @@ theme:
 The default theme, which was built as a custom [Bootstrap] theme, supports almost
 every feature of MkDocs.
 
-![mkdocs](../img/mkdocs.png)
+![mkdocs](../https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/mkdocs.png)
 
 In addition to the default [theme configuration options][theme], the `mkdocs` theme
 supports the following options:
@@ -118,7 +118,7 @@ A clone of the default theme used by the [Read the Docs] service, which offers
 the same restricted feature set as its parent theme. Like its parent theme, only
 two levels of navigation are supported.
 
-![ReadTheDocs](../img/readthedocs.png)
+![ReadTheDocs](../https://github.com/ValeryPyzhykGo/idp-service/blob/main/docs/img/readthedocs.png)
 
 In addition to the default [theme configuration options][theme], the `readthedocs`
 theme supports the following options:
