@@ -136,13 +136,6 @@ within that file. Just make sure that the `main.html` extends `base.html`. For
 example, to alter the title of the MkDocs theme, your replacement `main.html`
 template would contain the following:
 
-```django
-{% extends "base.html" %}
-
-{% block htmltitle %}
-<title>Custom title goes here</title>
-{% endblock %}
-```
 
 In the above example, the `htmltitle` block defined in your custom `main.html` file
 will be used in place of the default `htmltitle` block defined in the parent theme.
@@ -196,14 +189,6 @@ replace the block defined in the parent template and any links to libraries in
 the parent template will be removed. To avoid breaking the template, a
 [super block] can be used with a call to `super` from within the block:
 
-```django
-{% extends "base.html" %}
-
-{% block libs %}
-    {{ super() }}
-    <script src="{{ base_url }}/js/somelib.js"></script>
-{% endblock %}
-```
 
 Note that the [base_url] template variable was used to ensure that the link is
 always relative to the current page.
